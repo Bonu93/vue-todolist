@@ -43,6 +43,10 @@ body {
     text-decoration: line-through;
 }
 
+.cta .fa-trash {
+    cursor: pointer;
+}
+
 
 
 
