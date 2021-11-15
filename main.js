@@ -41,7 +41,7 @@ const app = new Vue({
         },
 
         addNewToDo() {
-            this.todos.push({
+            this.todos.unshift({
                 text: this.newToDo,
                 completed: false
             });
