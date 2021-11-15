@@ -28,7 +28,7 @@
                 <button class="btn btn-success" @click="addNewToDo">Aggiungi</button>
             </div>
             <div class="todo-list w-75">
-                <ul class="todos-list">
+                <ul class="todos-list" v-if="todos.length !== 0">
                     <li v-for="(todo, i) in todos" class="todo d-flex justify-content-between mb-1 p-2">
                         <div class="text
                          d-flex 
@@ -47,6 +47,7 @@
                         </div>
                     </li>
                 </ul>
+                <h2 v-else>La TodoList è vuota, aggiungi una task</h2>
                 
             </div>
         </section>
