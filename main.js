@@ -18,7 +18,7 @@ const app = new Vue({
 
             {
                 text: 'Lavare la macchina',
-                completed: true,
+                completed: false,
             },
 
             {
@@ -30,6 +30,8 @@ const app = new Vue({
     },
 
     methods: {
-
+        toggleComplete(array, index) {
+            this.array[index].completed = !this.array[index].completed;
+        }
     },
 })

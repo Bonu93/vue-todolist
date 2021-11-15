@@ -25,6 +25,26 @@ body {
     border-radius: 15px;
 }
 
+.todo .text {
+    cursor: pointer;
+}
+
+.check-complete {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid black;
+}
+
+.done > .check-complete {
+    background-color: green;
+}
+
+.done.text {
+    text-decoration: line-through;
+}
+
+
+
 
 
 

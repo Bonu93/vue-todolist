@@ -24,8 +24,21 @@
             </div>
             <div class="todo-list w-75">
                 <ul class="todos">
-                    <li v-for="todo in todos" class="todo d-flex justify-content-between mb-1 p-2">
-                        <div>{{ todo.text }}</div>
+                    <li v-for="(todo, i) in todos" class="todo d-flex justify-content-between mb-1 p-2">
+                        <div class="text
+                         d-flex 
+                         align-items-center
+                        flex-grow-1 
+                        justify-content-between"
+                        :class="{done: todo.completed}"
+                        @click="toggleComplete(todos, i)"
+                        >
+                            {{ todo.text }}
+                            <div class="check-complete mx-2"></div>
+                        </div>
+                        <div class="cta d-flex align-items-center">
+                            <i class="fas fa-trash"></i>
+                        </div>
                     </li>
                 </ul>
                 
