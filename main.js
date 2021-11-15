@@ -27,6 +27,8 @@ const app = new Vue({
             },
         ],
 
+        newToDo: '',
+
     },
 
     methods: {
@@ -36,6 +38,17 @@ const app = new Vue({
 
         deleteTodo(index) {
             this.todos.splice(index, 1);
-        }
+        },
+
+        addNewToDo() {
+            this.todos.push({
+                text: this.newToDo,
+                completed: false
+            });
+
+            this.newToDo = '';
+
+            this.$refs.toDoInput.focus();
+        },
     },
 })

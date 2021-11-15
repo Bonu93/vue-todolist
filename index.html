@@ -19,8 +19,13 @@
         </header>
         <section class="d-flex flex-column text-center justify-content-center align-items-center">
             <div class="new-todo d-flex w-50 mb-3">
-                <input type="text" placeholder="Inserisci nuovo ToDo" class="flex-grow-1 mx-3 px-2">
-                <button class="btn btn-success">Aggiungi</button>
+                <input type="text" 
+                placeholder="Inserisci nuovo ToDo" 
+                class="flex-grow-1 mx-3 px-2"
+                v-model.trim="newToDo"
+                ref="toDoInput"
+                @keyup.enter="addNewToDo">
+                <button class="btn btn-success" @click="addNewToDo">Aggiungi</button>
             </div>
             <div class="todo-list w-75">
                 <ul class="todos-list">
