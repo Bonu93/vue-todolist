@@ -30,8 +30,8 @@ const app = new Vue({
     },
 
     methods: {
-        toggleComplete(array, index) {
-            this.array[index].completed = !this.array[index].completed;
+        toggleComplete(index) {
+            this.todos[index].completed = !this.todos[index].completed;
         }
     },
 })

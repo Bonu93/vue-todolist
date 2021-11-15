@@ -23,7 +23,7 @@
                 <button class="btn btn-success">Aggiungi</button>
             </div>
             <div class="todo-list w-75">
-                <ul class="todos">
+                <ul class="todos-list">
                     <li v-for="(todo, i) in todos" class="todo d-flex justify-content-between mb-1 p-2">
                         <div class="text
                          d-flex 
@@ -31,7 +31,7 @@
                         flex-grow-1 
                         justify-content-between"
                         :class="{done: todo.completed}"
-                        @click="toggleComplete(todos, i)"
+                        @click="toggleComplete(i)"
                         >
                             {{ todo.text }}
                             <div class="check-complete mx-2"></div>
