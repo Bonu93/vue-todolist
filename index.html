@@ -18,21 +18,33 @@
             <h1>ToDoList</h1>
         </header>
         <section class="d-flex flex-column text-center justify-content-center align-items-center">
+
             <div class="new-todo d-flex w-50 mb-3">
-                <input type="text" 
+                <input 
+                type="text" 
                 placeholder="Inserisci nuovo ToDo" 
                 class="flex-grow-1 mx-3 px-2"
                 v-model.trim="newToDo"
                 ref="toDoInput"
-                @keyup.enter="addNewToDo">
-                <button class="btn btn-success" @click="addNewToDo">Aggiungi</button>
+                @keyup.enter="addNewToDo"
+                >
+
+                <button 
+                class="btn btn-success" 
+                @click="addNewToDo"
+                >
+                Aggiungi
+                </button>
+
             </div>
             <div class="todo-list w-75">
                 <ul class="todos-list" v-if="todos.length !== 0">
+
                     <li v-for="(todo, i) in todos" class="todo d-flex justify-content-between mb-1 p-2">
-                        <div class="text
-                         d-flex 
-                         align-items-center
+                        <div 
+                        class="text
+                        d-flex 
+                        align-items-center
                         flex-grow-1 
                         justify-content-between"
                         :class="{done: todo.completed}"
@@ -41,12 +53,15 @@
                             {{ todo.text }}
                             <div class="check-complete mx-2"></div>
                         </div>
+
                         <div class="cta d-flex align-items-center">
                             <i class="fas fa-trash"
                             @click="deleteTodo(i)"></i>
                         </div>
                     </li>
+
                 </ul>
+                
                 <h2 v-else>La TodoList è vuota, aggiungi una task</h2>
                 
             </div>
